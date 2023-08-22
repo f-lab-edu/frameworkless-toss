@@ -1,6 +1,5 @@
 import createRouter from "./router/router.js";
 import createPages from "./router/pages.js";
-
 const container = document.querySelector("#app");
 
 const pages = createPages(container);
