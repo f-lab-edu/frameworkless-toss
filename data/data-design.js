@@ -1,5 +1,5 @@
 export const DUMMY_DATA_DESIGN = {
-  title: "개발",
+  title: "디자인",
   results: [
     {
       thumbImg: "https://static.toss.im/career-resource/slackbot101.png",
