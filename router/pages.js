@@ -1,15 +1,15 @@
-import getDataList from "../apis/getListData.js";
-import listView from "../view/list.js";
+import getListData from "../apis/getListData.js";
+import listPage from "../view/lists/listPage.js";
 
 export default (container) => {
   const tech = async () => {
-    const res = await getDataList("tech");
-    container.innerHTML = listView(res);
+    const res = await getListData("tech");
+    container.innerHTML = listPage(res);
   };
 
   const design = async () => {
-    const res = await getDataList("design");
-    container.innerHTML = listView(res);
+    const res = await getListData("design");
+    container.innerHTML = listPage(res);
   };
 
   const article = (params) => {

@@ -1,4 +1,4 @@
-export default function listItemView(data) {
+export default function listItem(data) {
   console.log("data", data);
   const { title, thumbImg, desc, reg_date } = data;
   return `
