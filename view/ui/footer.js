@@ -6,7 +6,7 @@ export default function footer() {
         <ul class="w-[170px] text-[15px] color-[#6b7684]">
           <li><div class="text-[#333d4b] font-[700] mb-[5px]">토스테크</div></li>
           <li>
-            <a href="mailto:techblog@toss.im">의견 보내기</a>
+            <a href="mailto:">의견 보내기</a>
           </li>
         </ul>
         <ul class="w-[170px] text-[15px] color-[#6b7684]">
@@ -27,10 +27,10 @@ export default function footer() {
             <a href="tel:1599-4905">전화: 1599-4905 (24시간 연중무휴)</a>
           </li>
           <li>
-            <a href="mailto:support.toss.im">이메일: support@toss.im</a>
+            <a href="mailto:">이메일: test@test.com </a>
           </li>
           <li>
-            <a href="https://goto.kakao.com/@toss">카카오톡: @toss</a>
+            <a href="#">카카오톡: @test</a>
           </li>
         </ul>
       </div>
