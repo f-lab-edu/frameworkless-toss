@@ -24,9 +24,10 @@ router
 내베기에션 버튼 이벤트 리스너 설정
 data-navigate 속성 값을 가져와 router.navigate() 메서드 호출하여 해당 경로로 이동
 */
-const NAV_BTN_SELECTOR = "button[data-navigate]";
+const NAV_BTN_SELECTOR = "[data-navigate]";
 document.body.addEventListener("click", (e) => {
-  const { target } = e;
+  // 클릭 대상의 가까운 부모 중 data-navigate 속성을 갖는 요소 탐색
+  const target = e.target.closest(NAV_BTN_SELECTOR);
   if (target.matches(NAV_BTN_SELECTOR)) {
     const { navigate } = target.dataset;
     router.navigate(navigate);
