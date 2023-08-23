@@ -3,13 +3,13 @@ export default function footer() {
   <footer class="pt-[50px] pb-[100px]">
     <div class="max-w-[1064px] m-auto px-[67px]">
       <div class="flex pb-[50px]">
-        <ul class="w-[170px] text-[15px] color-[#6b7684]">
+        <ul class="w-[170px] text-[15px] text-[#6b7684]">
           <li><div class="text-[#333d4b] font-[700] mb-[5px]">토스테크</div></li>
           <li>
             <a href="mailto:">의견 보내기</a>
           </li>
         </ul>
-        <ul class="w-[170px] text-[15px] color-[#6b7684]">
+        <ul class="w-[170px] text-[15px] text-[#6b7684]">
           <li><div class="text-[#333d4b] font-[700] mb-[5px]">토스</div></li>
           <li>
             <a href="https://toss.im">홈페이지</a>
@@ -21,7 +21,7 @@ export default function footer() {
             <a href="https://toss.im/career">채용</a>
           </li>
         </ul>
-        <ul class="w-[170px] text-[15px] color-[#6b7684] flex-1">
+        <ul class="w-[170px] text-[15px] text-[#6b7684] flex-1">
           <li><div class="text-[#333d4b] font-[700] mb-[5px]">고객센터</div></li>
           <li>
             <a href="tel:1599-4905">전화: 1599-4905 (24시간 연중무휴)</a>
@@ -34,7 +34,7 @@ export default function footer() {
           </li>
         </ul>
       </div>
-      <address class="color-[#8b95a1] text-[13px] whitespace-pre-wrap">
+      <address class="text-[#8b95a1] text-[13px] whitespace-pre-wrap">
         <strong class="block pb-[16px] text-[15px] colo-[#333d4b]"
           >㈜비바리퍼블리카</strong
         >Copyright © Viva Republica, Inc. All Rights Reserved.
