@@ -1,4 +1,6 @@
+import getArticleData from "../apis/getArticleData.js";
 import getListData from "../apis/getListData.js";
+import articlePage from "../view/article/articlePage.js";
 import listPage from "../view/lists/listPage.js";
 
 export default (container) => {
@@ -12,9 +14,14 @@ export default (container) => {
     container.innerHTML = listPage(res);
   };
 
-  const article = (params) => {
+  const article = async (params) => {
     const { id } = params;
-    container.textContent = `아티클 상세 ${id}`;
+    try {
+      const res = await getArticleData(id);
+      container.innerHTML = articlePage(res);
+    } catch (error) {
+      notFound();
+    }
   };
 
   const notFound = () => {
