@@ -1,13 +1,15 @@
 import footer from "../ui/footer.js";
 import header from "../ui/header.js";
 import listItemView from "./listItem.js";
+import bottomBanner from "../ui/bottomBanner.js";
 
 const listPage = (res) => {
   const { results, title } = res;
-  
+
   const headerTemplate = header();
   const footerTemplate = footer();
   const ItemsTemplate = results.map((item) => listItemView(item)).join("");
+  const bottomBannerTemplate = bottomBanner();
 
   let template = `
   {{__header__}}
@@ -21,11 +23,13 @@ const listPage = (res) => {
     </ul>
   </section>
   
+  {{__bottom_banner__}}
   {{__footer__}}
   `;
   template = template.replace("{{__header__}}", headerTemplate);
   template = template.replace("{{__list_items__}}", ItemsTemplate);
   template = template.replace("{{__footer__}}", footerTemplate);
+  template = template.replace("{{__bottom_banner__}}", bottomBannerTemplate);
 
   return template;
 };
