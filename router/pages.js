@@ -20,6 +20,7 @@ export default (container) => {
       const res = await getArticleData(id);
       container.innerHTML = articlePage(res);
     } catch (error) {
+      console.log(error)
       notFound();
     }
   };

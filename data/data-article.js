@@ -1,13 +1,88 @@
-const DUMMY_CONTENT = [
-  {
-    tag: "h1",
-    children: "텍스트",
-  },
-  {
-    tag: "p",
-    children: "텍스트",
-  },
-];
+const DUMMY_CONTENT_TEMP1 = {
+  tag: "div",
+  props: { class: "mt-[50px]" },
+  children: [
+    {
+      tag: "p",
+      props: { class: "text-[17px] leading-[1.6] mt-[15px]" },
+      children: [
+        "토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.",
+      ],
+    },
+    {
+      tag: "p",
+      props: { class: "text-[17px] leading-[1.6] mt-[15px]" },
+      children: [
+        "이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.",
+      ],
+    },
+    {
+      tag: "h1",
+      props: {
+        class: "text-[30px] leading-[1.55] font-[700] mt-[40px] mb-[5px]",
+      },
+      children: ["Polyfill 이란?"],
+    },
+    {
+      tag: "p",
+      props: { class: "text-[17px] leading-[1.6] mt-[15px]" },
+      children: [
+        "오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 Promise나 Set 객체가 없는 경우가 있습니다.",
+      ],
+    },
+    {
+      tag: "p",
+      props: { class: "text-[17px] leading-[1.6] mt-[15px]" },
+      children: [
+        "예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.",
+      ],
+    },
+    {
+      tag: "p",
+      props: { class: "text-[17px] leading-[1.6] mt-[15px]" },
+      children: [
+        "얼음과 설산에서 만물은 만천하의 천지는 이것이다. 그들을 이것이야말로 눈에 청춘의 인간이 살았으며, 봄날의 청춘에서만 대한 보라. 광야에서 있는 얼음에 위하여, 영원히 그와 커다란 심장은 대고, 약동하다. 그들의 얼음에 산야에 주며, 그림자는 방황하여도, 장식하는 황금시대를 교향악이다. 곧 지혜는 되려니와, 청춘의 그것을 행복스럽고 새가 하는 것이다.보라, 아름다우냐? 주며, 얼음과 우리 그들은 철환하였는가? 보는 뜨고, 석가는 있는 길을 꽃 인간에 것이다. 시들어 청춘이 사는가 이것이다. 내려온 전인 별과 속에서 살 이상, 천하를 얼음에 보라. 미묘한 찾아다녀도, 있으며, 든 것이다. 얼음 속에 온갖 새가 전인 길을 모래뿐일 가는 피다.",
+      ],
+    },
+    {
+      tag: "img",
+      props: {
+        class: "text-[17px] leading-[1.6] my-[30px] rounded-[8px]",
+        src: "https://static.toss-internal.com/ipd-tcs/toss_core/staging/cf75c34d-feeb-4909-a200-8119c0ef7fa6",
+      },
+      children: [],
+    },
+    {
+      tag: "p",
+      props: {
+        class: "text-center text-[17px] text-[#3f123d]",
+      },
+      children: ["img 태그도 추가할 수 있습니다."],
+    },
+    {
+      tag: "img",
+      props: {
+        class: "text-[17px] leading-[1.6] my-[30px] rounded-[8px]",
+        src: "https://static.toss-internal.com/ipd-tcs/toss_core/live/e6e776d0-1d3f-42c8-a230-9fa20eff55cd",
+      },
+      children: [],
+    },
+    {
+      tag: "h1",
+      props: {
+        class: "text-[30px] leading-[1.55] font-[700] mt-[40px] mb-[5px]",
+      },
+      children: ["h1 태그에 스타일을 입히면 이렇게 됩니다."],
+    },
+    {
+      tag: "p",
+      props: {
+        class: "text-[17px] leading-[1.6] mt-[15px]",
+      },
+      children: ["DOM 구조를 한눈에 파악하기는 좀 어려운 것 같네요."],
+    },
+  ],
+};
 
 export const DUMMY_ARTICLE_DATA = {
   id1: {
@@ -22,7 +97,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.8.23",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id2: {
     thumbImg:
@@ -38,7 +113,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id3: {
     thumbImg: "https://static.toss.im/3d/tossface-part-thumbnail.png",
@@ -52,7 +127,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id4: {
     thumbImg: "https://static.toss.im/illusts/tools-designer-cover.jpg",
@@ -66,7 +141,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id5: {
     thumbImg:
@@ -81,7 +156,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id6: {
     thumbImg:
@@ -96,7 +171,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id7: {
     thumbImg:
@@ -112,7 +187,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id8: {
     thumbImg:
@@ -127,7 +202,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id9: {
     thumbImg: "https://static.toss.im/assets/toss-tech/node%20js-security.png",
@@ -141,7 +216,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id10: {
     thumbImg: "https://static.toss.im/illusts-content/img-tech-cover.png",
@@ -155,7 +230,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id11: {
     thumbImg: "https://wp.toss.tech/wp-content/uploads/2023/03/center.png",
@@ -169,7 +244,7 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
   id12: {
     thumbImg:
@@ -184,6 +259,6 @@ export const DUMMY_ARTICLE_DATA = {
     },
     reg_date: "2023.7.21",
     category: "tech",
-    content: DUMMY_CONTENT, // 이 부분 데이터로 처리
+    content: DUMMY_CONTENT_TEMP1, // 이 부분 데이터로 처리
   },
 };
