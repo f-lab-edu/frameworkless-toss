@@ -12,7 +12,7 @@ const articleHeader = (data) => {
     </h1>
     <section class="flex items-center">
       <img
-        src="https://static.toss.im/assets/toss-tech/slash_juneseokbeomgeun.png"
+        src=" ${writer.profileImg}"
         alt=""
         class="w-[48px] h-[48px] rounded-[50%] mr-[14px]"
       />

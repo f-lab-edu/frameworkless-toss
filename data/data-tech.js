@@ -45,10 +45,11 @@ export const DUMMY_DATA_TECH = {
       category: "tech",
     },
     {
-      thumbImg: "url",
+      thumbImg:
+        "https://wp.toss.tech/wp-content/uploads/2023/03/00017-3291509353.png",
       id: "id12",
-      title: "제목",
-      desc: "설명글",
+      title: "tosspayments-restdocs: 선언형 문서 작성 라이브러리",
+      desc: "REST Docs 를 최소한의 코드로 작성하면서 변화에도 더 유연하게 대처할 수 있는 tosspayments-restdocs 라이브러리와, 라이브러리에 녹인 기술들을 소개합니다.",
       reg_date: "2023.7.21",
       category: "tech",
     },

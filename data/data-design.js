@@ -44,10 +44,11 @@ export const DUMMY_DATA_DESIGN = {
       category: "design",
     },
     {
-      thumbImg: "url",
+      thumbImg:
+        "https://static.toss.im/assets/toss-tech/cover-1st-interactiondesigner.png",
       id: "id6",
-      title: "제목",
-      desc: "설명글",
+      title: "첫 인터랙션 디자이너가 문제를 해결하는 법",
+      desc: "처음 입사했을 때 인터랙션 디자이너의 역할에 대해 막연하게 느꼈을 때가 있었어요. 하지만 제품의 문제를 하나씩 해결하면서 저의 역할을 정의해나갈 수 있었어요. 어떤 시행착오가 있었는지 공유해 드릴게요.",
       reg_date: "2023.7.21",
       category: "design",
     },

@@ -10,7 +10,7 @@ const getListData = (category) => {
       } else {
         rej(new Error());
       }
-    }, 1000);
+    }, 400);
   });
 };
 

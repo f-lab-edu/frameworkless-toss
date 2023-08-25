@@ -8,7 +8,7 @@ const getArticleData = (id) => {
       } else {
         rej(new Error("No Data"));
       }
-    }, 1000);
+    }, 400);
   });
 };
 

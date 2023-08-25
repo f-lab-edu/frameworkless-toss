@@ -28,7 +28,7 @@ const NAV_BTN_SELECTOR = "[data-navigate]";
 document.body.addEventListener("click", (e) => {
   // 클릭 대상의 가까운 부모 중 data-navigate 속성을 갖는 요소 탐색
   const target = e.target.closest(NAV_BTN_SELECTOR);
-  if (target.matches(NAV_BTN_SELECTOR)) {
+  if (target !== null && target.matches(NAV_BTN_SELECTOR)) {
     const { navigate } = target.dataset;
     router.navigate(navigate);
   }
