@@ -21,13 +21,23 @@ vscode Liver server에서 설정하는 방법은 따로 없다고 해서 express
 - /article/title-id 이 경로로 이동 후 새로고침 했을 때 오류가 표시되어
   'express-history-api-fallback' 패키지 설치하여 해결하였습니다.
 
-# view - template 활용한 렌더링 함수
+# template 활용한 렌더링 함수
+
+```js
+let template = `
+  <div>
+    <p>텍스트</p>
+  </div>
+`;
+
+container.innerHTML = template; // 형태로 렌더
+```
 
 ## article - 상세 페이지
 
 ### 페이지 데이터 분석
 
-- 데이터
+#### 데이터
 
 ```js
 {
@@ -46,23 +56,25 @@ vscode Liver server에서 설정하는 방법은 따로 없다고 해서 express
 }
 ```
 
-- content객체
+#### content 데이터 구조화
 
-```js
+```ts
 // content 내용 데이터 구조화
+
 {
-  {
-    tag : 'h1',
-    children : '텍스트'
-  },
-  {
-    tag : 'p'
-    children : '텍스트'
-  }
+  tag : 'h1', // 태그 이름
+  props : {'속성' : '값', "속성2" : "값2"} // 태그에 추가할 속성값 객체
+  children : [ // 자식 요소
+    {
+      tag : 'p',
+      props : {'속성1' : '값' }
+      children : ['텍스트'] // 자식 요소가 텍스트면 텍스트 노드 반환
+    }
+  ]
 }
 ```
-- tag, children 내용에 맞게 DOM 요소가 렌더링 되도록 처리하기.
 
+- tag, children 내용에 맞게 DOM 요소가 렌더링 되도록 처리하기.
 
 ### 참고
 
