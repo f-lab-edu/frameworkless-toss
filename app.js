@@ -1,5 +1,6 @@
 import createRouter from "./router/router.js";
 import createPages from "./router/pages.js";
+import Router from "./router/router.js";
 const container = document.querySelector("#app");
 
 const pages = createPages(container);
@@ -11,14 +12,15 @@ const pages = createPages(container);
 start() 메서드로 라우터 시작
 - 초기 경로 확인, 페이지 내에서 라우트 변경을 감지하기 위한 리스너 설정
 */
-const router = createRouter();
+// const router = createRouter();
+const router = new Router();
 router
   .addRoute("/", pages.tech)
   .addRoute("/tech", pages.tech)
   .addRoute("/design", pages.design)
   .addRoute("/article/:id", pages.article)
   .setNotFound(pages.notFound)
-  .start();
+  .init();
 
 /* 
 내베기에션 버튼 이벤트 리스너 설정
