@@ -1,5 +1,4 @@
 const articleBottom = (data) => {
-  console.log("클릭");
   let template = `
   <div class="flex items-center flex-col justify-center mt-[18px] p-[32px] bg-[rgb(249, 250, 251)] w-full h-auto">
     <h2 class="text-[24px] font-[700] mb-[16px] text-[rgb(78, 89, 104)]">재미있게 읽으셨나요?</h2>

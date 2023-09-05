@@ -2,8 +2,10 @@ import footer from "../ui/footer.js";
 import header from "../ui/header.js";
 import listItemView from "./listItem.js";
 import bottomBanner from "../ui/bottomBanner.js";
+import getListData from "../../apis/getListData.js";
 
-const listPage = (res) => {
+const listPage = async (target, category) => {
+  const res = await getListData(category);
   const { results, title } = res;
 
   const headerTemplate = header();
@@ -31,7 +33,7 @@ const listPage = (res) => {
   template = template.replace("{{__footer__}}", footerTemplate);
   template = template.replace("{{__bottom_banner__}}", bottomBannerTemplate);
 
-  return template;
+  target.innerHTML = template;
 };
 
 export default listPage;
