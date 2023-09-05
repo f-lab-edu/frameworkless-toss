@@ -98,10 +98,24 @@ class Router {
     this.checkRoutes();
   }
 
-  /** 초기화 */
+  /** 초기화 - navigation 버튼 이벤트 리스너 등록*/
   init() {
     this.checkRoutes();
     window.addEventListener("popstate", this.checkRoutes.bind(this));
+
+    /* 
+    내베기에션 버튼 이벤트 리스너 설정
+    data-navigate 속성 값을 가져와 router.navigate() 메서드 호출하여 해당 경로로 이동
+    */
+    const NAV_BTN_SELECTOR = "[data-navigate]";
+    document.body.addEventListener("click", (e) => {
+      // 클릭 대상의 가까운 부모 중 data-navigate 속성을 갖는 요소 탐색
+      const target = e.target.closest(NAV_BTN_SELECTOR);
+      if (target !== null && target.matches(NAV_BTN_SELECTOR)) {
+        const { navigate } = target.dataset;
+        this.navigate(navigate);
+      }
+    });
   }
 }
 
