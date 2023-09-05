@@ -1,7 +1,7 @@
 import { DUMMY_DATA_DESIGN } from "../data/data-design.js";
 import { DUMMY_DATA_TECH } from "../data/data-tech.js";
 
-const getDataList = (category) => {
+const getListData = (category) => {
   return new Promise((res, rej) => {
     const success = true; // 임시
     setTimeout(() => {
@@ -14,4 +14,4 @@ const getDataList = (category) => {
   });
 };
 
-export default getDataList;
+export default getListData;
