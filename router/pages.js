@@ -4,23 +4,19 @@ import articlePage from "../view/article/articlePage.js";
 import listPage from "../view/lists/listPage.js";
 
 export default (container) => {
-  const tech = async () => {
-    const res = await getListData("tech");
-    container.innerHTML = listPage(res);
+  const tech = () => {
+    listPage(container, "tech");
   };
 
-  const design = async () => {
-    const res = await getListData("design");
-    container.innerHTML = listPage(res);
+  const design = () => {
+    listPage(container, "design");
   };
 
   const article = async (params) => {
     const { id } = params;
     try {
-      const res = await getArticleData(id);
-      container.innerHTML = articlePage(res);
+      await articlePage(container, id);
     } catch (error) {
-      console.log(error)
       notFound();
     }
   };
